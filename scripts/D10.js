@@ -115,8 +115,11 @@ function onlyLetters(str) {
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+
+
 function isThisAnEmail(str) {
-  return str.includes("@");
+  let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+  return regex.test(str);
 }
 
 /* ESERCIZIO 7
